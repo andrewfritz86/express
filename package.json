@@ -1,0 +1,22 @@
+{
+  "name": "express",
+  "version": "1.0.0",
+  "description": "Weeeeee",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewfritz86/express.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrewfritz86/express/issues"
+  },
+  "homepage": "https://github.com/andrewfritz86/express#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
