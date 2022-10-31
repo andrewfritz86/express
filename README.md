@@ -26,3 +26,19 @@ What the heck is a "server" anyways? Why do we need / want one?
   - "The Cloud" - lol!
   - DNS
   - Domains/ CNames, etc
+
+
+  ### Part 2
+
+  Client-Side JS and "bundling"
+
+  - Scope
+  - hoisting?
+  - File mgmt
+  - Modules: commonJS(module.exports) vs es6(export default) - quick aside on gotchas with these
+  - Webpack and bundlers
+  - Entry points
+  - Loaders?
+  - Plugins?
+  - Babel / transpilation?
+  - "Code splitting"
