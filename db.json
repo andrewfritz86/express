@@ -1,0 +1,17 @@
+{
+  "friends": [
+    {
+      "name": "Isolde",
+      "dog": "Momo"
+    },
+    {
+      "name": "Crystal",
+      "dog": "Riley"
+    },
+    {
+      "name": "andy",
+      "dog": "pasha",
+      "id": "2"
+    }
+  ]
+}

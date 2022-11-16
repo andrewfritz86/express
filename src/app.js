@@ -3,9 +3,52 @@ const express = require('express')
 const app = express()
 
 app.use(express.urlencoded({extended: true}));
+app.use(express.static('public'))
+
+const fetch = (...args) =>
+	import('node-fetch').then(({default: fetch}) => fetch(...args));
+
 
 // PORT?? WHY??
-const port =  3000
+const port =  4000
+
+
+app.get("/server-rendered-html", async (req,res) => {
+  
+
+  //Fetch JSON from our API
+  console.log("are we hitting the route?")
+  const data = await fetch("http://localhost:3000/friends");
+  console.log("did we hit the endpoint?", data)
+  const json = await data.json()
+  
+  //Format it as HTML!!
+  const html = json.map(person => `<li>${person.name} loves their dog ${person.dog} </li>`)
+
+
+  const response = `
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>HTML 5 Boilerplate</title>
+      <link rel="stylesheet" href="style.css">
+    </head>
+    <script>console.log("hello world") </script>
+    <body>
+      <h1> HELLO SERVER RENDRED HTML</h1>
+      <ul>
+        ${html}
+      </ul>
+    </body>
+  </html>
+  `
+
+  res.send(response);
+  // Return it
+})
 
 
 app.get("/", (req, res) => {
