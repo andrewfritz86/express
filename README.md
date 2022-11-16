@@ -32,6 +32,14 @@ What the heck is a "server" anyways? Why do we need / want one?
 
   Client-Side JS and "bundling"
 
+
+  - "static" vs server rendered
+  - public folder
+  - JSON API
+  ...
+  - JS in script tags
+  - Single JS static file
+
   - Scope
   - hoisting?
   - File mgmt
